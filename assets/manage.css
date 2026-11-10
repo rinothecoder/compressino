@@ -1,0 +1,45 @@
+/* Compressino line in the media popup and on the Edit Media screen. */
+.compressino-field{max-width:420px}
+.compressino-field__text{margin:4px 0 8px;font-size:13px;line-height:1.5}
+.compressino-field__help,.compressino-field__status{margin:6px 0 0;font-size:12px;line-height:1.5;color:#666}
+.compressino-field__status:empty{display:none}
+
+/* Images section on the Compressino screen. Scoped under .cp-wrap, uses the screen's own tokens. */
+.cp-wrap .cp-images{margin-top:56px;padding-top:40px;border-top:1px solid var(--cp-border)}
+.cp-wrap .cp-images h2{font-size:18px;font-weight:600;line-height:1.15;color:var(--cp-ink);margin:0 0 20px}
+.cp-wrap .cp-filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.cp-wrap .cp-filter{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:6px 14px;border:1px solid var(--cp-border);border-radius:999px;background:var(--cp-surface);color:var(--cp-body);font-size:13px;line-height:1.4;cursor:pointer}
+.cp-wrap .cp-filter span{color:var(--cp-muted);font-variant-numeric:tabular-nums}
+.cp-wrap .cp-filter:hover{border-color:var(--cp-accent)}
+.cp-wrap .cp-filter[aria-pressed=true]{border-color:var(--cp-accent);color:var(--cp-accent);font-weight:600}
+.cp-wrap .cp-filter[aria-pressed=true] span{color:var(--cp-accent)}
+.cp-wrap.is-running .cp-filter,.cp-wrap .is-running .cp-filter{opacity:.6;cursor:default}
+.cp-wrap .cp-bulk{border:1px solid var(--cp-border);border-radius:var(--cp-radius);background:var(--cp-surface);padding:20px 24px;margin-bottom:20px}
+.cp-wrap .cp-bulk[hidden]{display:none}
+.cp-wrap .cp-bulk__row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.cp-wrap .cp-bulk__text{margin:0;color:var(--cp-ink);font-weight:600;font-size:14px}
+.cp-wrap .cp-bulk__actions{display:flex;gap:12px}
+.cp-wrap .cp-bulk__actions [hidden]{display:none}
+.cp-wrap .cp-progress{height:6px;border-radius:999px;background:var(--cp-border);overflow:hidden;margin-top:16px}
+.cp-wrap .cp-progress[hidden]{display:none}
+.cp-wrap .cp-progress span{display:block;height:100%;width:0;background:var(--cp-accent);transition:width .3s ease}
+.cp-wrap .cp-list{border-top:1px solid var(--cp-border)}
+.cp-wrap .cp-list:empty{border-top:0}
+.cp-wrap .cp-row{display:grid;grid-template-columns:48px minmax(0,2fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.2fr) minmax(160px,auto);gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--cp-border)}
+.cp-wrap .cp-row--head{padding:8px 0;color:var(--cp-muted);font-size:12px;font-weight:600}
+.cp-wrap .cp-row--head .cp-row__title{grid-column:1/3}
+.cp-wrap .cp-row__thumb{display:block;width:48px;height:48px;object-fit:cover;border-radius:var(--cp-control-radius);background:var(--cp-subtle)}
+.cp-wrap .cp-row__name{min-width:0}
+.cp-wrap .cp-row__name strong{display:block;color:var(--cp-ink);font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cp-wrap .cp-row__name span{display:block;color:var(--cp-muted);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cp-wrap .cp-row__cell{color:var(--cp-body);font-size:13px;font-variant-numeric:tabular-nums;min-width:0}
+.cp-wrap .cp-row__cell strong{color:var(--cp-ink);font-weight:600}
+.cp-wrap .cp-row__action{display:flex;align-items:center;justify-content:flex-end;gap:10px}
+.cp-wrap .cp-row__action .cp-button{min-height:34px;padding:6px 14px}
+.cp-wrap .cp-row__action [hidden]{display:none}
+.cp-wrap .cp-row__status{color:var(--cp-muted);font-size:12px}
+.cp-wrap .cp-row__status:empty{display:none}
+.cp-wrap .cp-list__empty{margin-top:16px}
+.cp-wrap .cp-list__empty[hidden],.cp-wrap .cp-list__more[hidden]{display:none}
+.cp-wrap .cp-list__more{margin-top:20px}
+@media(max-width:782px){.cp-wrap .cp-row{grid-template-columns:48px minmax(0,1fr);gap:6px 16px}.cp-wrap .cp-row--head{display:none}.cp-wrap .cp-row__cell,.cp-wrap .cp-row__action{grid-column:2;justify-content:flex-start}.cp-wrap .cp-row__cell[data-label]::before{content:attr(data-label) ": ";color:var(--cp-muted);font-size:12px}.cp-wrap .cp-row__cell:empty{display:none}.cp-wrap .cp-bulk{padding:18px}}

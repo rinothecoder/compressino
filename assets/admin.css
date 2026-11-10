@@ -1,0 +1,101 @@
+/* Compressino admin. Matches Redirectino and Pencilino. All rules are scoped under .cp-wrap. */
+.cp-wrap{--cp-accent:#7c3aed;--cp-hover:#6d28d9;--cp-ink:#1e1e1e;--cp-body:#444;--cp-muted:#666;--cp-border:#e0e0e0;--cp-surface:#fff;--cp-subtle:#f6f6f7;--cp-danger:#b32d2e;--cp-success:#246b45;--cp-radius:8px;--cp-control-radius:6px;margin:0;color:var(--cp-body);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;font-size:14px}
+.cp-wrap *,.cp-wrap *::before,.cp-wrap *::after{box-sizing:border-box}
+.cp-header{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--cp-surface);border-bottom:1px solid var(--cp-border);padding:18px 28px;margin-left:-20px}
+.cp-brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--cp-ink)}
+.cp-brand:hover{color:var(--cp-ink)}
+.cp-brand__icon{display:block;width:32px;height:32px;margin-block:-4px;flex-shrink:0}
+.cp-brand h1{font-size:18px;font-weight:600;line-height:1.15;margin:0;padding:0;color:var(--cp-ink)}
+.cp-header-note{font-size:12px;color:var(--cp-muted)}
+.cp-content{max-width:1200px;margin:34px auto;padding:0 28px 20px}
+.cp-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,380px);gap:48px;align-items:start}
+.cp-settings h2,.cp-panel h2{font-size:18px;font-weight:600;line-height:1.15;color:var(--cp-ink);margin:0 0 24px}
+.cp-field>label{display:block;color:var(--cp-ink);font-weight:600;font-size:13px;margin-bottom:8px}
+.cp-wrap input[type=number],.cp-wrap input[type=text],.cp-wrap select{width:100%;max-width:none;min-height:42px;border:1px solid var(--cp-border);border-radius:var(--cp-control-radius);background:var(--cp-surface);color:var(--cp-ink);padding:8px 12px;font-size:14px;line-height:1.5;box-shadow:none}
+.cp-help{color:var(--cp-muted);font-size:12px;line-height:1.6;margin:8px 0 0;max-width:66ch}
+.cp-check{padding:18px 0;border-top:1px solid var(--cp-border)}
+.cp-check:last-of-type{border-bottom:1px solid var(--cp-border);margin-bottom:24px}
+.cp-check label{display:flex;align-items:center;gap:8px;color:var(--cp-ink);font-weight:600;font-size:13px;margin:0}
+.cp-check input[type=checkbox]{margin:0;border-color:var(--cp-border)}
+.cp-check .cp-help{margin-left:24px}
+.cp-button{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 18px;background:var(--cp-accent);color:var(--cp-surface);border:1px solid transparent;border-radius:var(--cp-control-radius);font-size:13px;line-height:1.5;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap}
+.cp-button:hover{background:var(--cp-hover);color:var(--cp-surface)}
+.cp-button--quiet{background:var(--cp-surface);color:var(--cp-ink);border-color:var(--cp-border)}
+.cp-button--quiet:hover{background:var(--cp-subtle);color:var(--cp-ink)}
+.cp-button--danger{background:var(--cp-danger)}
+.cp-button[disabled]{opacity:.6;cursor:default}
+.cp-wrap a:focus-visible,.cp-wrap button:focus-visible,.cp-wrap input:focus-visible,.cp-wrap select:focus-visible{outline:2px solid var(--cp-accent);outline-offset:3px;box-shadow:none}
+.cp-side{display:grid;gap:24px}
+.cp-panel{border:1px solid var(--cp-border);background:var(--cp-surface);border-radius:var(--cp-radius);padding:24px 28px;scroll-margin-top:50px}
+.cp-panel h2{margin-bottom:16px}
+.cp-stats{margin:0}
+.cp-stats>div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--cp-border);font-size:13px}
+.cp-stats>div:last-child{border-bottom:0}
+.cp-stats dt{color:var(--cp-muted)}
+.cp-stats dd{margin:0;color:var(--cp-ink);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.cp-muted{color:var(--cp-muted);font-weight:400}
+.cp-bad{color:var(--cp-danger)}
+.cp-form-actions{display:flex;gap:12px;align-items:center;margin-top:16px;flex-wrap:wrap}
+.cp-notice{padding:14px 18px;border:1px solid var(--cp-border);border-left:3px solid var(--cp-success);border-radius:var(--cp-control-radius);background:var(--cp-surface);margin-bottom:24px;font-size:13px;line-height:1.6}
+.cp-notice--error{border-left-color:var(--cp-danger)}
+.cp-quality{margin-bottom:28px}
+.cp-quality__head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:10px}
+.cp-quality__head label{color:var(--cp-ink);font-weight:600;font-size:13px}
+.cp-quality__head output{color:var(--cp-ink);font-weight:600;font-size:18px;font-variant-numeric:tabular-nums}
+.cp-wrap input[type=range]{-webkit-appearance:none;appearance:none;display:block;width:100%;height:6px;margin:12px 0;border:0;border-radius:999px;background:linear-gradient(to right,var(--cp-accent) var(--cp-fill,90%),var(--cp-border) var(--cp-fill,90%));cursor:pointer}
+.cp-wrap input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--cp-surface);border:2px solid var(--cp-accent)}
+.cp-wrap input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--cp-surface);border:2px solid var(--cp-accent)}
+.cp-wrap input[type=range]::-moz-range-track{background:transparent}
+.cp-quality__ends{display:flex;justify-content:space-between;gap:16px;color:var(--cp-muted);font-size:12px}
+.cp-quality__note{margin:14px 0 0;padding:12px 14px;background:var(--cp-surface);border:1px solid var(--cp-border);border-radius:var(--cp-control-radius);color:var(--cp-ink);font-size:13px;line-height:1.6}
+.cp-preview{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:20px}
+.cp-preview[hidden]{display:none}
+.cp-preview__pane{margin:0;min-width:0}
+.cp-preview__pane figcaption{font-size:12px;color:var(--cp-muted);margin-bottom:8px}
+.cp-preview__pane figcaption strong{color:var(--cp-ink);font-weight:600;margin-left:4px}
+.cp-preview__frame{position:relative;height:280px;overflow:hidden;border:1px solid var(--cp-border);border-radius:var(--cp-control-radius);background:var(--cp-surface)}
+.cp-preview__frame img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:auto;height:auto;max-width:none}
+.cp-preview__bar{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;color:var(--cp-muted)}
+.cp-preview__bar>span{min-width:0;flex:1;overflow-wrap:anywhere}
+.cp-zoom{display:inline-flex;align-items:center;gap:4px;flex-shrink:0}
+.cp-zoom button{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;padding:0;border:1px solid var(--cp-border);border-radius:var(--cp-control-radius);background:var(--cp-surface);color:var(--cp-ink);font-size:16px;line-height:1;cursor:pointer}
+.cp-zoom button:hover{border-color:var(--cp-accent);color:var(--cp-accent)}
+.cp-zoom button[disabled]{opacity:.4;cursor:default;border-color:var(--cp-border);color:var(--cp-ink)}
+.cp-zoom output{min-width:44px;text-align:center;font-size:12px;color:var(--cp-ink);font-variant-numeric:tabular-nums}
+.cp-preview__bar .cp-text-action{flex:1;text-align:right}
+.cp-text-action{background:none;border:0;padding:0;color:var(--cp-accent);cursor:pointer;font-size:12px;line-height:1.6;white-space:nowrap}
+.cp-text-action:hover{color:var(--cp-hover);text-decoration:underline}
+.cp-text-action[hidden]{display:none}
+@media(max-width:1100px){.cp-content{padding:0 18px 20px}.cp-layout{grid-template-columns:1fr;gap:32px}}
+@media(max-width:782px){.cp-header{margin-left:-10px;padding:18px}.cp-content{margin-top:24px;padding:0 12px 20px}.cp-header-note{display:none}.cp-preview{grid-template-columns:1fr}.cp-preview__frame{height:220px}.cp-panel{padding:22px 20px}}
+
+/* Admin notices: shown below the header, in the gray area. wp-header-end moves them there; hidden until then so nothing jumps. */
+body.toplevel_page_compressino #wpbody-content>div.notice,body.toplevel_page_compressino #wpbody-content>div.updated,body.toplevel_page_compressino #wpbody-content>div.error{display:none}
+.cp-wrap>div.notice,.cp-wrap>div.updated,.cp-wrap>div.error{box-sizing:border-box;max-width:1144px;width:calc(100% - 112px);margin:24px auto 0}
+@media(max-width:782px){.cp-wrap>div.notice,.cp-wrap>div.updated,.cp-wrap>div.error{width:calc(100% - 48px)}}
+
+/* Header navigation, as in Pencilino. */
+.cp-nav{display:flex;gap:18px;flex-wrap:wrap}
+.cp-nav a{text-decoration:none;color:var(--cp-muted);font-size:13px;font-weight:500;transition:color .15s}
+.cp-nav a:hover,.cp-nav a.is-active{color:var(--cp-accent)}
+
+/* Info and clean-up boxes. */
+.cp-panel__text{margin:0 0 12px;color:var(--cp-body);font-size:13px;line-height:1.6}
+.cp-panel__text strong{color:var(--cp-ink)}
+.cp-points{margin:0;padding-left:18px;list-style:disc}
+.cp-points li{margin:0 0 6px;font-size:13px;line-height:1.6;color:var(--cp-body)}
+.cp-points li:last-child{margin-bottom:0}
+.cp-points a{color:var(--cp-accent)}
+.cp-panel[hidden]{display:none}
+.cp-cleanup__warning{margin:0 0 16px}
+.cp-panel [data-cleanup-status]:empty{display:none}
+.cp-button--danger:hover{background:var(--cp-danger);filter:brightness(.9)}
+
+/* About page, as in Pencilino. */
+.cp-about{max-width:620px;margin:0 auto;background:var(--cp-surface);border:1px solid var(--cp-border);border-radius:var(--cp-radius);padding:36px 40px}
+.cp-eyebrow{display:block;color:var(--cp-accent);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.cp-about h2{font-size:24px;font-weight:600;line-height:1.25;color:var(--cp-ink);margin:5px 0 28px;padding:0}
+.cp-about__photo{display:block;width:80px;height:80px;border-radius:50%;object-fit:cover;margin-bottom:28px}
+.cp-about p{font-size:16px;line-height:1.8;margin:0 0 18px;color:var(--cp-body)}
+.cp-about__signature{display:block;margin-top:32px;width:60px;height:auto}
+@media(max-width:782px){.cp-about{padding:28px 22px}}
